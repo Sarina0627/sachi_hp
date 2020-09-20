@@ -11,18 +11,10 @@
     font-size: 100%;
     vertical-align: baseline;
 }
-ul{list-style:none;}
 
-
-
-/* micro clearfix */
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
+ul{
+    list-style:none;
 }
-.cf:after {clear: both;}
-.cf {*zoom: 1;}
 
 /* ========================================
   基本情報
@@ -42,6 +34,12 @@ body a:hover{
   color:#5b8bac;
 }
 
+.wrapper{
+  height:auto;
+  overflow: hidden;
+}
+
+
 /* ========================================
   ヘッダー
 ========================================= */
@@ -52,7 +50,10 @@ header{
 
 #header_inner{
   position: fixed;
-  margin-left: 50px;
+/*  margin-left: 50px;*/
+  width: 100%;
+  background-color: rgba(142,168,177,0.7);
+  z-index: 2;
 }
 
 #header_inner_left{
@@ -60,10 +61,11 @@ header{
 }
 
 #header_inner_left p{
-  font-size: 25px;
-  padding: 23px 100px;
+  font-size: 30px;
+  padding: 23px 140px;
   float: left;
   font-weight:100;
+  font-family: 'Handlee', cursive;
 }
 
 #header_inner_left ul{
@@ -75,6 +77,8 @@ header{
   float: left;
   border-left: 0.5px solid #646060;
   padding:0px 50px;
+  font-family: 'Handlee', cursive;
+  font-size: 20px;
 }
 
 #header_inner_left li:first-child{
@@ -87,52 +91,6 @@ header{
   padding-right: 50px;
 }
 
-#header_inner_right{
-  width:450px;
-  height:100px;
-  float: right;
-  margin-right: 50px;
-  margin-top: 3px;
-}
-
-#header_inner_right:after{
-  content:"";
-  clear:both;
-  display:block;
-}
-
-header #insta{
-  float: left;
-  padding-top:30px;
-  padding-left: 150px;
-}
-
-header #insta i{
-  color:#5b8bac;
-  font-size:35px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-header #contact a{
-  color: #fff;
-  text-shadow: 1px 1px 0 #646060;
-}
-
-header #contact{
-  float:right;
-  margin-top:24px;
-  margin-right: 50px;
-  padding: 5px 10px;
-  border:1px solid #5b8bac;
-  background-color: #5b8bac;
-}
-
-header #contact:active{
-  border-bottom: 3px solid #646060;
-  border-right: 2px solid #646060;
-}
-
 #main_picture{
   padding-left: 100px;
 }
@@ -141,36 +99,6 @@ header #contact:active{
   margin-top: 100px;
   width:1238px;
   height:652px;
-}
-
-/* ========================================
-  メインインデックス
-========================================= */
-#main_index{
-  width:1500px;
-  height:200px;
-  margin-left: 70px;
-}
-
-#main_index .circle{
-  position: relative;
-  display: inline-block;
-  float: left;
-  width:150px;
-  height:150px;
-  border:3px solid #999999;
-  border-radius: 50%;
-  margin-top: 0px;
-  margin-left: 137.5px;
-  text-align: center;
-  line-height: 150px;
-}
-#main_index .circle i{
-  position: absolute;
-  color: #999999;
-  font-size: 30px;
-  left: 44.5%;
-  top:70%;
 }
 
 /* ========================================
@@ -186,6 +114,7 @@ header #contact:active{
     height:700px;
 /*    background-color: #f00;*/
     margin: 0 auto;
+    margin-top: 50px;
     margin-bottom: 70px;
 }
 
@@ -210,7 +139,7 @@ header #contact:active{
     width: 1180px;
     height: 678px;
     opacity: 0;
-    
+
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -250,8 +179,12 @@ Hobbies
 }
 
 .title_hobbies{
+    font-size: 50px;
+    font-family: 'Handlee', cursive;
     text-align: center;
     padding-bottom: 20px;
+    font-weight:60;
+
 }
 
 .hobby_caption{
@@ -317,13 +250,21 @@ Hobbies
 }
 
 #hobbies h2{
-  font-size: 25px;
-  border-bottom: 0.5px solid #646060;
-  padding-top: 50px;
+  font-size: 35px;
+  padding-top: 70px;
 }
 
+
+#hobbies h3{
+  font-size: 26px;
+  border-bottom: 0.5px solid #646060;
+  margin-top:30px;
+  padding-bottom:5px;
+}
+
+
 #hobbies p{
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 /* ========================================
@@ -358,13 +299,14 @@ lab
 }
 
 .readmore{
+    font-size: 12px;
     border: 1px solid #646060;
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 20px;
     position: absolute;
     top:270px;
-    left: 70px;
-    
+    left: 75px;
+
 }
 
 .readmore:hover{
@@ -377,7 +319,6 @@ galley
 ========================================= */
 #galley{
     width: 1220px;
-    height:700px;
     margin: 0 auto;
     margin-bottom: 70px;
 }
@@ -387,4 +328,18 @@ galley
     float: left;
 }
 
- 
+.footer_space{
+    width:100%;
+    height:30px;
+    background-color: rgba(142,168,177,0.5);
+    margin-top: 60px;
+}
+
+.footer_space p{
+    padding-top:3px;
+    text-align: center;
+}
+
+.copy{
+    font-size: 15px;
+}
